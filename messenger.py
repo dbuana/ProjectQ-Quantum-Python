@@ -1,41 +1,3 @@
-# Attempting to learn Quantum Computing with Python3.
-# Quantum computers - Computer technology with vast association with qubits.
-
-# A basic quantum computer program with application of Hadamard matrix.
-# A Random Generator Program
-from projectq.ops import H, Measure # ProjectQ is an IBM quantum computer library.
-from projectq import MainEngine
-
-# Applying a qubit
-engine = MainEngine()
-qubit = engine.allocate_qubit()
-# Application of Hadamard's matrix to the program
-
-def get_random():
-    qubit = engine.allocate_qubit()
-    # Applying Hadamard's matrix to the program
-    H | qubit
-    Measure | qubit
-    # After a brief analyzation of the qubit, it will generate a random number.
-    random_numbers = int(qubit)
-    return random_numbers
-
-numbers = []
-
-for i in range(5):
-    numbers.append(get_random())
-
-engine.flush()
-print("Hadamard's Matrix: " + str(numbers))
-# Result: Based on the Hadamard's matrix, the function will return Hadamard's values; in an array form.
-
-# Second practice-project
-
-# Quantum Teleportation; a texting protocol of teleporting quantum states - basic idea.
-
-# An example of wtiching qunatum sates - input:[0,1] and output: [1,0]. With the application
-# of Hadamard's matrix, this is essentially based of each other.
-
 # Quantum teleportation project , the basic program will be about. Person A sending a message to Person B.
 from projectq.ops import All, CNOT, H, Measure, X, Y
 from projectq import MainEngine
@@ -81,9 +43,6 @@ def sending_message(message, qubit_one="", qubit_two=""):
         return xQubit
     else:
         return None
-
-def messsage_receiver(qubits, message):
-    """
-    With the application of Hadamard's 
-    """
-    if message[1] and qubits[1] ==
+    
+    
+# ===================== Under Construction =========================
